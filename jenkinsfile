@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    environment {
+        PROJECT_NAME = "AreYouVegetarians"
+        SCHEME = "AreYouVegetarians"
+        CONFIGURATION = "Debug"
+        SDK = "iphonesimulator"
+        DESTINATION = "platform=iOS Simulator,name=iPhone 14"
+    }
+
+    stages {
+        stage('📥 Checkout') {
+            steps {
+                echo "Git 저장소에서 프로젝트 코드 가져오기"
+                checkout scm
+            }
+        }
+
+        stage('🛠️ Build') {
+            steps {
+                echo "Xcode 프로젝트 빌드 시작"
+                sh """
+                xcodebuild clean \
+                  -project ${PROJECT_NAME}.xcodeproj \
+                  -scheme ${SCHEME} \
+                  -configuration ${CONFIGURATION}
+
+                xcodebuild build \
+                  -project ${PROJECT_NAME}.xcodeproj \
+                  -scheme ${SCHEME} \
+                  -configuration ${CONFIGURATION} \
+                  -destination '${DESTINATION}'
+                """
+            }
+        }
+
+        stage('🧪 Test') {
+            steps {
+                echo "Xcode 테스트 실행 중"
+                sh """
+                xcodebuild test \
+                  -project ${PROJECT_NAME}.xcodeproj \
+                  -scheme ${SCHEME} \
+                  -configuration ${CONFIGURATION} \
+                  -destination '${DESTINATION}' \
+                  -allowProvisioningUpdates
+                """
+            }
+        }
+
+        stage('✅ Done') {
+            steps {
+                echo "✅ 빌드 및 테스트 완료!"
+            }
+        }
+    }
+}
+
