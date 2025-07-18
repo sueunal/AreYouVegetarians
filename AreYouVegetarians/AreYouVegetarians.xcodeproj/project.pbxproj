@@ -10,7 +10,18 @@
 		ED71A8022E29269A00729E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED71A7FF2E29269A00729E1B /* Assets.xcassets */; };
 		ED71A8032E29269A00729E1B /* AreYouVegetariansApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */; };
 		ED71A8042E29269A00729E1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A8002E29269A00729E1B /* ContentView.swift */; };
+		EDCAC2AD2E2A70D400EF1468 /* AreYouVegetariansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCAC2AB2E2A70D400EF1468 /* AreYouVegetariansTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDCAC2A62E2A70CD00EF1468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED71A7E62E29266900729E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED71A7ED2E29266900729E1B;
+			remoteInfo = AreYouVegetarians;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreYouVegetarians.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +29,19 @@
 		ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegetariansApp.swift; sourceTree = "<group>"; };
 		ED71A7FF2E29269A00729E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED71A8002E29269A00729E1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDCAC2A22E2A70CD00EF1468 /* AreYouVegetariansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreYouVegetariansTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCAC2AB2E2A70D400EF1468 /* AreYouVegetariansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegetariansTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ED71A7EB2E29266900729E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAC29F2E2A70CD00EF1468 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				ED71A8012E29269A00729E1B /* AreYouVegetarians */,
+				EDCAC2AC2E2A70D400EF1468 /* AreYouVegetariansTests */,
 				ED71A7EF2E29266900729E1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */,
+				EDCAC2A22E2A70CD00EF1468 /* AreYouVegetariansTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +78,14 @@
 				ED71A8002E29269A00729E1B /* ContentView.swift */,
 			);
 			path = AreYouVegetarians;
+			sourceTree = "<group>";
+		};
+		EDCAC2AC2E2A70D400EF1468 /* AreYouVegetariansTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAC2AB2E2A70D400EF1468 /* AreYouVegetariansTests.swift */,
+			);
+			path = AreYouVegetariansTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +110,26 @@
 			productReference = ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EDCAC2A12E2A70CD00EF1468 /* AreYouVegetariansTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCAC2AA2E2A70CD00EF1468 /* Build configuration list for PBXNativeTarget "AreYouVegetariansTests" */;
+			buildPhases = (
+				EDCAC29E2E2A70CD00EF1468 /* Sources */,
+				EDCAC29F2E2A70CD00EF1468 /* Frameworks */,
+				EDCAC2A02E2A70CD00EF1468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCAC2A72E2A70CD00EF1468 /* PBXTargetDependency */,
+			);
+			name = AreYouVegetariansTests;
+			packageProductDependencies = (
+			);
+			productName = AreYouVegetariansTests;
+			productReference = EDCAC2A22E2A70CD00EF1468 /* AreYouVegetariansTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +142,10 @@
 				TargetAttributes = {
 					ED71A7ED2E29266900729E1B = {
 						CreatedOnToolsVersion = 16.3;
+					};
+					EDCAC2A12E2A70CD00EF1468 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = ED71A7ED2E29266900729E1B;
 					};
 				};
 			};
@@ -110,6 +164,7 @@
 			projectRoot = "";
 			targets = (
 				ED71A7ED2E29266900729E1B /* AreYouVegetarians */,
+				EDCAC2A12E2A70CD00EF1468 /* AreYouVegetariansTests */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED71A8022E29269A00729E1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCAC2A02E2A70CD00EF1468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +197,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDCAC29E2E2A70CD00EF1468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCAC2AD2E2A70D400EF1468 /* AreYouVegetariansTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDCAC2A72E2A70CD00EF1468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED71A7ED2E29266900729E1B /* AreYouVegetarians */;
+			targetProxy = EDCAC2A62E2A70CD00EF1468 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ED71A7F82E29266A00729E1B /* Debug */ = {
@@ -324,6 +402,55 @@
 			};
 			name = Release;
 		};
+		EDCAC2A82E2A70CD00EF1468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soom.AreYouVegetariansTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AreYouVegetarians.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AreYouVegetarians";
+			};
+			name = Debug;
+		};
+		EDCAC2A92E2A70CD00EF1468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soom.AreYouVegetariansTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AreYouVegetarians.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AreYouVegetarians";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +468,15 @@
 			buildConfigurations = (
 				ED71A7FB2E29266A00729E1B /* Debug */,
 				ED71A7FC2E29266A00729E1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCAC2AA2E2A70CD00EF1468 /* Build configuration list for PBXNativeTarget "AreYouVegetariansTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCAC2A82E2A70CD00EF1468 /* Debug */,
+				EDCAC2A92E2A70CD00EF1468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
