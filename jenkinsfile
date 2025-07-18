@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    environment {
+        PROJECT_NAME = "AreYouVegetarians"
+        SCHEME_NAME  = "AreYouVegetarians"
+        SIMULATOR    = "platform=iOS Simulator,name=iPhone 15 Pro,OS=18.3.1"
+    }
+
     stages {
         stage('📥 Checkout') {
             steps {
@@ -12,34 +18,33 @@ pipeline {
         stage('🛠️ Build') {
             steps {
                 echo 'Xcode 프로젝트 빌드 시작'
-                sh '''
-                cd AreYouVegetarians
-                xcodebuild clean -project AreYouVegetarians.xcodeproj -scheme AreYouVegetarians -configuration Debug
-                '''
+                sh """
+                    cd ${PROJECT_NAME}
+                    xcodebuild clean -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -configuration Debug
+                """
             }
         }
 
         stage('🧪 Test') {
             steps {
                 echo 'Xcode 테스트 실행'
-def simulator = "platform=iOS Simulator,name=iPhone 15 Pro,OS=18.3.1"
-sh """
-cd AreYouVegetarians
-xcodebuild test \
-  -project AreYouVegetarians.xcodeproj \
-  -scheme AreYouVegetarians \
-  -destination '${simulator}'
-"""
-
-                cd AreYouVegetarians
-                xcodebuild test -project AreYouVegetarians.xcodeproj -scheme AreYouVegetarians -destination "platform=iOS Simulator,name=iPhone 14,OS=16.4"
+                sh """
+                    cd ${PROJECT_NAME}
+                    xcodebuild test -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -destination '${SIMULATOR}'
+                """
             }
         }
 
         stage('✅ Done') {
             steps {
-                echo '✅ 빌드 & 테스트 완료'
+                echo '✅ CI/CD 완료!'
             }
+        }
+    }
+
+    post {
+        failure {
+            echo '🚨 빌드 또는 테스트 단계에서 실패가 발생했습니다.'
         }
     }
 }
