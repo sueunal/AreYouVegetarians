@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1ECCB02E2B6B140070088C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECCAF2E2B6B140070088C /* ViewModel.swift */; };
-		ED1ECCB22E2B6B640070088C /* AreYouVegeteriansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */; };
+		ED1ECCC92E2B7DC20070088C /* AreYouVegeteriansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECCB32E2B7AAE0070088C /* AreYouVegeteriansUITests.swift */; };
 		ED71A8022E29269A00729E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED71A7FF2E29269A00729E1B /* Assets.xcassets */; };
 		ED71A8032E29269A00729E1B /* AreYouVegetariansApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */; };
 		ED71A8042E29269A00729E1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A8002E29269A00729E1B /* ContentView.swift */; };
@@ -16,6 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ED1ECCBF2E2B7BD20070088C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED71A7E62E29266900729E1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED71A7ED2E29266900729E1B;
+			remoteInfo = AreYouVegetarians;
+		};
 		EDCAC2A62E2A70CD00EF1468 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED71A7E62E29266900729E1B /* Project object */;
@@ -27,7 +34,9 @@
 
 /* Begin PBXFileReference section */
 		ED1ECCAF2E2B6B140070088C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegeteriansUITests.swift; sourceTree = "<group>"; };
+		ED1ECCB32E2B7AAE0070088C /* AreYouVegeteriansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegeteriansUITests.swift; sourceTree = "<group>"; };
+		ED1ECCB92E2B7BD20070088C /* AreYouVegetariansUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AreYouVegetariansUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1ECCC52E2B7BE80070088C /* AreYouVegetariansUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegetariansUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreYouVegetarians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED71A7FD2E29269A00729E1B /* AreYouVegetarians.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AreYouVegetarians.entitlements; sourceTree = "<group>"; };
 		ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegetariansApp.swift; sourceTree = "<group>"; };
@@ -38,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED1ECCB62E2B7BD20070088C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED71A7EB2E29266900729E1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,11 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1ECCC62E2B7BE80070088C /* AreYouVegetariansUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED1ECCB32E2B7AAE0070088C /* AreYouVegeteriansUITests.swift */,
+				ED1ECCC52E2B7BE80070088C /* AreYouVegetariansUITestsLaunchTests.swift */,
+			);
+			path = AreYouVegetariansUITests;
+			sourceTree = "<group>";
+		};
 		ED71A7E52E29266900729E1B = {
 			isa = PBXGroup;
 			children = (
 				ED71A8012E29269A00729E1B /* AreYouVegetarians */,
 				EDCAC2AC2E2A70D400EF1468 /* AreYouVegetariansTests */,
+				ED1ECCC62E2B7BE80070088C /* AreYouVegetariansUITests */,
 				ED71A7EF2E29266900729E1B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +95,7 @@
 			children = (
 				ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */,
 				EDCAC2A22E2A70CD00EF1468 /* AreYouVegetariansTests.xctest */,
+				ED1ECCB92E2B7BD20070088C /* AreYouVegetariansUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				EDCAC2AB2E2A70D400EF1468 /* AreYouVegetariansTests.swift */,
-				ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */,
 			);
 			path = AreYouVegetariansTests;
 			sourceTree = "<group>";
@@ -97,6 +123,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED1ECCB82E2B7BD20070088C /* AreYouVegetariansUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED1ECCC12E2B7BD20070088C /* Build configuration list for PBXNativeTarget "AreYouVegetariansUITests" */;
+			buildPhases = (
+				ED1ECCB52E2B7BD20070088C /* Sources */,
+				ED1ECCB62E2B7BD20070088C /* Frameworks */,
+				ED1ECCB72E2B7BD20070088C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED1ECCC02E2B7BD20070088C /* PBXTargetDependency */,
+			);
+			name = AreYouVegetariansUITests;
+			packageProductDependencies = (
+			);
+			productName = AreYouVegetariansUITests;
+			productReference = ED1ECCB92E2B7BD20070088C /* AreYouVegetariansUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		ED71A7ED2E29266900729E1B /* AreYouVegetarians */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED71A7FA2E29266A00729E1B /* Build configuration list for PBXNativeTarget "AreYouVegetarians" */;
@@ -143,9 +189,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
-				LastUpgradeCheck = 1630;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					ED1ECCB82E2B7BD20070088C = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = ED71A7ED2E29266900729E1B;
+					};
 					ED71A7ED2E29266900729E1B = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -171,11 +221,19 @@
 			targets = (
 				ED71A7ED2E29266900729E1B /* AreYouVegetarians */,
 				EDCAC2A12E2A70CD00EF1468 /* AreYouVegetariansTests */,
+				ED1ECCB82E2B7BD20070088C /* AreYouVegetariansUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED1ECCB72E2B7BD20070088C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED71A7EC2E29266900729E1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED1ECCB52E2B7BD20070088C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1ECCC92E2B7DC20070088C /* AreYouVegeteriansUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED71A7EA2E29266900729E1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED1ECCB22E2B6B640070088C /* AreYouVegeteriansUITests.swift in Sources */,
 				EDCAC2AD2E2A70D400EF1468 /* AreYouVegetariansTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +281,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		ED1ECCC02E2B7BD20070088C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED71A7ED2E29266900729E1B /* AreYouVegetarians */;
+			targetProxy = ED1ECCBF2E2B7BD20070088C /* PBXContainerItemProxy */;
+		};
 		EDCAC2A72E2A70CD00EF1468 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ED71A7ED2E29266900729E1B /* AreYouVegetarians */;
@@ -224,6 +294,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		ED1ECCC22E2B7BD20070088C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soom.AreYouVegetariansUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = AreYouVegetarians;
+			};
+			name = Debug;
+		};
+		ED1ECCC32E2B7BD20070088C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U4BQZ3AXAA;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.3.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soom.AreYouVegetariansUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = AreYouVegetarians;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		ED71A7F82E29266A00729E1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -258,6 +375,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -322,6 +440,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -353,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -386,6 +506,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = U4BQZ3AXAA;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -462,6 +583,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED1ECCC12E2B7BD20070088C /* Build configuration list for PBXNativeTarget "AreYouVegetariansUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED1ECCC22E2B7BD20070088C /* Debug */,
+				ED1ECCC32E2B7BD20070088C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ED71A7E92E29266900729E1B /* Build configuration list for PBXProject "AreYouVegetarians" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
