@@ -31,7 +31,7 @@ pipeline {
                 sh """
                     mkdir -p ${TEST_LOG_DIR}
                     xcodebuild test \
-                        -project ${PROJECT_NAME}.xcodeproj \
+                        -project ${PROJECT_NAME}/${PROJECT_NAME}.xcodeproj \
                         -scheme ${SCHEME_NAME} \
                         -destination '${SIMULATOR}' \
                         -enableCodeCoverage YES \
@@ -46,7 +46,7 @@ pipeline {
                 sh """
                     mkdir -p ${TEST_LOG_DIR}
                     xcodebuild test \
-                        -project ${PROJECT_NAME}.xcodeproj \
+                        -project ${PROJECT_NAME}/${PROJECT_NAME}.xcodeproj \
                         -scheme ${SCHEME_NAME} \
                         -only-testing:${PROJECT_NAME}UITests \
                         -destination '${SIMULATOR}' \
