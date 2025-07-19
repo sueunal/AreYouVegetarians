@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Xcode 프로젝트 빌드 시작'
                 sh """
-                    xcodebuild clean -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -configuration Debug
+                    xcodebuild clean -project ${PROJECT_NAME}/${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -configuration Debug
                 """
             }
         }
