@@ -11,7 +11,7 @@ import XCTest
 class HelloViewModelTests: XCTestCase {
     func testGreetSetsCorrectGreeting() {
         let viewModel = HelloViewModel()
-        viewModel.name = "Steve"
+        viewModel.name = "Steves"
         viewModel.greet()
         XCTAssertEqual(viewModel.greeting, "안녕하세요, Steve!")
     }
