@@ -4,10 +4,9 @@ pipeline {
     environment {
         PROJECT_NAME = "AreYouVegetarians"
         SCHEME_NAME  = "AreYouVegetarians"
-        SIMULATOR = "platform=iOS Simulator,name=iPhone 15 Pro,OS=18.3.1"
-
+        SIMULATOR    = "platform=iOS Simulator,name=iPhone 15 Pro,OS=18.3.1"
+        TEST_LOG_DIR = "build/reports"
     }
-
 
     stages {
         stage('📥 Checkout') {
@@ -21,56 +20,37 @@ pipeline {
             steps {
                 echo 'Xcode 프로젝트 빌드 시작'
                 sh """
-                    cd ${PROJECT_NAME}
                     xcodebuild clean -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -configuration Debug
                 """
             }
-
-        }
-	stage('Unit Test') {
-            steps {
-                sh '''
-                xcodebuild \
-                    -workspace $WORKSPACE \
-                    -scheme $SCHEME \
-                    -destination "$DESTINATION" \
-                    -sdk iphonesimulator \
-                    -enableCodeCoverage YES \
-                    clean test | tee xcodebuild.log | xcpretty -r junit -o build/reports/junit.xml
-                '''
-            }
-            post {
-                always {
-                    junit 'build/reports/junit.xml' // 테스트 결과를 Jenkins에 리포트
-                }
-            }
         }
 
-	stage('UI Test') {
+        stage('🧪 Unit Test') {
             steps {
-                sh '''
-                xcodebuild \
-                    -workspace $WORKSPACE \
-                    -scheme $SCHEME \
-                    -destination "$DESTINATION" \
-                    -sdk iphonesimulator \
-                    -only-testing:MyAppUITests \
-                    clean test | tee xcodebuild_ui.log | xcpretty -r junit -o build/reports/ui_junit.xml
-                '''
-            }
-            post {
-                always {
-                    junit 'build/reports/ui_junit.xml'
-                }
-            }
-        }
-
-        stage('🧪 Test') {
-            steps {
-                echo 'Xcode 테스트 실행'
+                echo '유닛 테스트 실행'
                 sh """
-                    cd ${PROJECT_NAME}
-                    xcodebuild test -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -destination '${SIMULATOR}'
+                    mkdir -p ${TEST_LOG_DIR}
+                    xcodebuild test \
+                        -project ${PROJECT_NAME}.xcodeproj \
+                        -scheme ${SCHEME_NAME} \
+                        -destination '${SIMULATOR}' \
+                        -enableCodeCoverage YES \
+                        | tee unit_test.log
+                """
+            }
+        }
+
+        stage('🧪 UI Test') {
+            steps {
+                echo 'UI 테스트 실행'
+                sh """
+                    mkdir -p ${TEST_LOG_DIR}
+                    xcodebuild test \
+                        -project ${PROJECT_NAME}.xcodeproj \
+                        -scheme ${SCHEME_NAME} \
+                        -only-testing:${PROJECT_NAME}UITests \
+                        -destination '${SIMULATOR}' \
+                        | tee ui_test.log
                 """
             }
         }
