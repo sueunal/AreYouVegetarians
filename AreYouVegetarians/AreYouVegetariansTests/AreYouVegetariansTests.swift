@@ -6,9 +6,13 @@
 //
 
 import XCTest
+@testable import AreYouVegetarians
 
-final class AreYouVegetariansTests: XCTestCase {
-    func testExample() throws {
-        XCTAssertEqual(1 + 1, 2)
+class HelloViewModelTests: XCTestCase {
+    func testGreetSetsCorrectGreeting() {
+        let viewModel = HelloViewModel()
+        viewModel.name = "Steve"
+        viewModel.greet()
+        XCTAssertEqual(viewModel.greeting, "안녕하세요, Steve!")
     }
 }

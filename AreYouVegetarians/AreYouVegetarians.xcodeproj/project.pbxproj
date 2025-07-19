@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1ECCB02E2B6B140070088C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECCAF2E2B6B140070088C /* ViewModel.swift */; };
+		ED1ECCB22E2B6B640070088C /* AreYouVegeteriansUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */; };
 		ED71A8022E29269A00729E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED71A7FF2E29269A00729E1B /* Assets.xcassets */; };
 		ED71A8032E29269A00729E1B /* AreYouVegetariansApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */; };
 		ED71A8042E29269A00729E1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED71A8002E29269A00729E1B /* ContentView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1ECCAF2E2B6B140070088C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegeteriansUITests.swift; sourceTree = "<group>"; };
 		ED71A7EE2E29266900729E1B /* AreYouVegetarians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreYouVegetarians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED71A7FD2E29269A00729E1B /* AreYouVegetarians.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AreYouVegetarians.entitlements; sourceTree = "<group>"; };
 		ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouVegetariansApp.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			children = (
 				ED71A7FD2E29269A00729E1B /* AreYouVegetarians.entitlements */,
 				ED71A7FE2E29269A00729E1B /* AreYouVegetariansApp.swift */,
+				ED1ECCAF2E2B6B140070088C /* ViewModel.swift */,
 				ED71A7FF2E29269A00729E1B /* Assets.xcassets */,
 				ED71A8002E29269A00729E1B /* ContentView.swift */,
 			);
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCAC2AB2E2A70D400EF1468 /* AreYouVegetariansTests.swift */,
+				ED1ECCB12E2B6B640070088C /* AreYouVegeteriansUITests.swift */,
 			);
 			path = AreYouVegetariansTests;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED71A8032E29269A00729E1B /* AreYouVegetariansApp.swift in Sources */,
+				ED1ECCB02E2B6B140070088C /* ViewModel.swift in Sources */,
 				ED71A8042E29269A00729E1B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1ECCB22E2B6B640070088C /* AreYouVegeteriansUITests.swift in Sources */,
 				EDCAC2AD2E2A70D400EF1468 /* AreYouVegetariansTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

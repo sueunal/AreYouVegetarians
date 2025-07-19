@@ -25,6 +25,44 @@ pipeline {
                     xcodebuild clean -project ${PROJECT_NAME}.xcodeproj -scheme ${SCHEME_NAME} -configuration Debug
                 """
             }
+
+        }
+	stage('Unit Test') {
+            steps {
+                sh '''
+                xcodebuild \
+                    -workspace $WORKSPACE \
+                    -scheme $SCHEME \
+                    -destination "$DESTINATION" \
+                    -sdk iphonesimulator \
+                    -enableCodeCoverage YES \
+                    clean test | tee xcodebuild.log | xcpretty -r junit -o build/reports/junit.xml
+                '''
+            }
+            post {
+                always {
+                    junit 'build/reports/junit.xml' // 테스트 결과를 Jenkins에 리포트
+                }
+            }
+        }
+
+	stage('UI Test') {
+            steps {
+                sh '''
+                xcodebuild \
+                    -workspace $WORKSPACE \
+                    -scheme $SCHEME \
+                    -destination "$DESTINATION" \
+                    -sdk iphonesimulator \
+                    -only-testing:MyAppUITests \
+                    clean test | tee xcodebuild_ui.log | xcpretty -r junit -o build/reports/ui_junit.xml
+                '''
+            }
+            post {
+                always {
+                    junit 'build/reports/ui_junit.xml'
+                }
+            }
         }
 
         stage('🧪 Test') {
