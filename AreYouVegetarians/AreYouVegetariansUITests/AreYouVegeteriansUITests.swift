@@ -21,7 +21,7 @@ final class AreYouVegetarians: XCTestCase {
         let nameTextField = app.textFields["NameTextField"]
         XCTAssertTrue(nameTextField.waitForExistence(timeout: 5), "이름 입력 필드가 존재해야 합니다.")
         nameTextField.tap()
-        nameTextField.typeText("Sooma!")
+        nameTextField.typeText("Sooma")
         app.keyboards.buttons["Return"].tap()
 
         let greetButton = app.buttons["GreetButton"]
